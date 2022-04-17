@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>File Upload POC Document</title>
+</head>
+<body>
+
+<form th:action="@{/userProfile/uploadVideo}" method="post"
+      enctype="multipart/form-data"
+>
+     <input type="hidden" id="name" name="name" value="pop">
+     <label style="margin-top: 15px;" class="label">User Short Intro Video</label>
+        <input type="file" name="userVideo" />
+     <input type="submit" value="Upload Video">
+</form>
+
+</body>
+</html>
