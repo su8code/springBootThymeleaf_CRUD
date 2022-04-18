@@ -16,13 +16,13 @@ public class UserProfileController {
     private static List<UserProfile> profiles = new ArrayList<>();
     private static boolean isInitialized = false;
     public static int numberOfProfiles = 0;
-    private static String profilePic = "http://localhost:8080/profile/user.png/";
+    private static String profilePic = "http://localhost:8080/profile/user.png";
     public static String baseUrl = "http://localhost:8080/";
 
     private static List<UserProfile> init() {
 
-        profiles.add(new UserProfile( 1,"Amanuel Tadesse", baseUrl+"profile/Amanuel Tadesse/aman.jpg" , 6 ,"male"));
-        profiles.add(new UserProfile( 2,"Fasika Zewdie", baseUrl+"profile/Fasika Zewdie/fasika.jpeg" , 6 , "male"));
+        profiles.add(new UserProfile( 1,"CEO Frehiwot Tamiru" , baseUrl+"profile/Firehiwot Tamiru/fire.jpg" , 6 ,"female"));
+        profiles.add(new UserProfile( 2,"Paulos Yibelo", baseUrl+"profile/Paulos Yibelo/paulos yibelo.jpg" , 6 , "male"));
        return profiles;
     }
     private static List<UserProfile> addNewProfile(UserProfile newProfile) {

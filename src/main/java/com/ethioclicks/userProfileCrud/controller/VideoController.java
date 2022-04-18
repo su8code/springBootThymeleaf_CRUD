@@ -37,6 +37,7 @@ public class VideoController {
         ImageStorage.saveFile(uploadDir, fileName, multipartFile);
 
 
+        System.out.println(name+" Uploaded a new Video");
         String url = baseUrl+"profile/"+name+"/video/"+fileName;
         UserProfileController.getProfiles().get(index).setUserVid(url);
         System.out.println("Generated Video Link: ' "+url+" '");
@@ -60,7 +61,6 @@ public class VideoController {
                 index = i;
             }
         }
-
         if(UserProfileController.getProfiles().get(index).getUserVid().endsWith("defaultVideo.mp4")){
             userDir = "user-photos/";
             fileName = "defaultVideo.mp4";
@@ -82,6 +82,8 @@ public class VideoController {
         }
 
         Resource res = ImageStorage.loadProfilePic(userDir , fileName);
+        System.out.println(UserProfileController.getProfiles().get(index).getUserName()+"'s Video is Being Downloaded...");
+
         response.setHeader("Content-Disposition", "attachment; filename=" +fileName);
         response.setHeader("Content-Transfer-Encoding", "binary");
         try{

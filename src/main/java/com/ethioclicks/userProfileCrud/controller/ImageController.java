@@ -26,6 +26,8 @@ public class ImageController {
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
         System.out.println("File Name: "+fileName);
         String uploadDir = "user-photos/"+name;
+
+        System.out.println("Image Uploading... "+name);
         ImageStorage.saveFile(uploadDir, fileName, multipartFile);
 
         model.addAttribute("userId" , numberOfProfiles);
@@ -67,6 +69,7 @@ public class ImageController {
         Resource res = ImageStorage.loadProfilePic(imageDir , fileName);
 
 
+        System.out.println(fileName+" is being Downloaded...");
         response.setHeader("Content-Disposition", "attachment; filename=" +fileName);
         response.setHeader("Content-Transfer-Encoding", "binary");
         try{
