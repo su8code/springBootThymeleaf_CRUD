@@ -4,7 +4,8 @@
 
 <h1 align="center">Spring Boot Project with Thymleaf</h1>
 
-### User Profile Manager CRUD Application for Uploading and Downloading Image/Video files using the File System.
+springBootUsersProfileCrud
+### Spring Boot Users Profile Manager CRUD Web Application
 
 the main objective of the spring boot project in this repository is to create a fullstack web application for implementing and testing a File Upload and Download functionality by using the file system inside our backend server. 
 
