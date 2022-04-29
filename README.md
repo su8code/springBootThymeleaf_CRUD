@@ -17,8 +17,11 @@ in this project we are going to create a user profile manager web application th
 ![landingPage](https://user-images.githubusercontent.com/88676535/165318743-04a5a50f-36d4-4abd-becd-73446dd2a920.png)
 
 
+### Add/Register a New Account
+
 ![add-new](https://user-images.githubusercontent.com/88676535/165318780-54981fac-eb54-4796-adee-1a9caac30341.png)
 
+### When You Click the Details Menu (eye icon shows details) Page Looks 
 ![details page](https://user-images.githubusercontent.com/88676535/165319032-52566eca-8912-4d7b-9502-4a50d60924d9.png)
 ![edit profile](https://user-images.githubusercontent.com/88676535/165319071-ecdf8117-755f-49d8-90a3-8958b1fb3db1.png)
 
