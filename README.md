@@ -12,7 +12,7 @@ in this project we are going to create a user profile manager web application th
 
 
 ## Screenshot
-### Main Landing Page of the web app look is as follows
+### Main Landing Page of the web app look
 
 ![landingPage](https://user-images.githubusercontent.com/88676535/165318743-04a5a50f-36d4-4abd-becd-73446dd2a920.png)
 
