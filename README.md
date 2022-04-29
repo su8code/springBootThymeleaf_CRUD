@@ -1,10 +1,10 @@
-## Uploading and Downloading Image/Video file using the File System in Spring Boot
-
 <p align="center">
   <a href="https://ethioclicks.com" rel="noopener" target="_blank"><img width="150" src="https://avatars.githubusercontent.com/u/84285742?v=4" alt="ethioclicks logo"></a>
 </p>
 
 <h1 align="center">Spring Boot Project with Thymleaf</h1>
+
+### User Profile Manager CRUD Application for Uploading and Downloading Image/Video files using the File System.
 
 the main objective of the spring boot project in this repository is to create a fullstack web application for implementing and testing a File Upload and Download functionality by using the file system inside our backend server. 
 
