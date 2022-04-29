@@ -2,7 +2,7 @@
   <a href="https://ethioclicks.com" rel="noopener" target="_blank"><img width="150" src="https://avatars.githubusercontent.com/u/84285742?v=4" alt="ethioclicks logo"></a>
 </p>
 
-<h1 align="center">Spring Boot Project with Thymleaf</h1>
+<h1 align="center" style="color:blue;">Spring Boot Project with Thymleaf</h1>
 
 <h2 align="center"> Spring Boot Users Profile Manager CRUD Web Application </h2>
 
