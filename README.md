@@ -4,6 +4,8 @@
   <a href="https://ethioclicks.com" rel="noopener" target="_blank"><img width="150" src="https://avatars.githubusercontent.com/u/84285742?v=4" alt="ethioclicks logo"></a>
 </p>
 
+<h1 align="center">Spring Boot Project with Thymleaf</h1>
+
 the main objective of the spring boot project in this repository is to create a fullstack web application for implementing and testing a File Upload and Download functionality by using the file system inside our backend server. 
 
 in this project we are going to create a user profile manager web application that enables us to create , edit , delete and update user profile information and every user profile consists of profile picture as well as a video file for each and every individual user profile we have in our profiles list.
