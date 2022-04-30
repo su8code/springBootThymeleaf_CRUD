@@ -1,15 +1,27 @@
-## Image and Video upload Download functionality using File System PoC in Spring Boot
+<p align="center">
+  <a href="https://ethioclicks.com" rel="noopener" target="_blank"><img width="150" src="https://avatars.githubusercontent.com/u/84285742?v=4" alt="ethioclicks logo"></a>
+</p>
 
-the main objective of the spring boot project in this repository is to create a fullstack web application for implementing and testing a File Upload and Download functionality by using the file system inside our backend server. 
+<h1 align="center" color="blue">Spring Boot Project with Thymleaf</h1>
 
-in this project we are going to create a user profile manager web application that enables us to create edit delete and update each individual user profiles.
+<h2 align="center"> Spring Boot Users Profile Manager Simple CRUD Web App </h2>
+
+The main objective of the spring boot project in this repository is to create a fullstack web application for implementing and testing spring boot as a backend to implement a File Upload and Download functionality by using the file system inside our backend server. 
+
+in this project we are going to create a user profile manager web application that enables us to create , edit , delete and update user profile information and, each and every user profile consists of profile picture as well as a video file for each and every individual user profile we have in our profiles list.
 
 
 ## Screenshot
+### Main Landing Page of the web app look
 
 ![landingPage](https://user-images.githubusercontent.com/88676535/165318743-04a5a50f-36d4-4abd-becd-73446dd2a920.png)
+
+
+### Add/Register a New Account
+
 ![add-new](https://user-images.githubusercontent.com/88676535/165318780-54981fac-eb54-4796-adee-1a9caac30341.png)
 
+### When You Click the Details Menu (eye icon shows details) Page Looks 
 ![details page](https://user-images.githubusercontent.com/88676535/165319032-52566eca-8912-4d7b-9502-4a50d60924d9.png)
 ![edit profile](https://user-images.githubusercontent.com/88676535/165319071-ecdf8117-755f-49d8-90a3-8958b1fb3db1.png)
 
