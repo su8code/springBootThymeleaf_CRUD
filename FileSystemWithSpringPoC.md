@@ -12,6 +12,18 @@ in this project we are going to create a user profile manager web application th
 
 ### Spring Boot multipartFile upload file size limit
 
+![properties](https://user-images.githubusercontent.com/88676535/166115921-bbde902c-415c-40ed-ae3f-29b891c23676.png)
+
+on the bove screenshot the first two line of code show how we can configure and change the default value of file upload size limmit in multipartFile upload form we have when we upload image and video files 
+
+```
+
+spring.servlet.multipart.max-file-size=6144MB
+spring.servlet.multipart.max-request-size=6144MB
+
+
+```
+
 ![upload size limit](https://user-images.githubusercontent.com/88676535/166115837-fc89059d-1c63-4720-8f05-210fce6b4470.png)
 
 
