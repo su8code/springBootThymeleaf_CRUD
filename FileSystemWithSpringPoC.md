@@ -18,6 +18,8 @@ http://localhost:8080/uploadImage
 
 #### Endpoint to Download Profile Picture 
 http://localhost:8080/userProfile/downloadPhoto/{id}
+
+<br />
 the above api endpoint is used to fetch and download user profile picture. it expects an id , the id is used to identify which users profile picture you want to download. by providing a correct and registered user id you can successfully download a picture of  the respective user. 
 
 
@@ -25,11 +27,9 @@ the above api endpoint is used to fetch and download user profile picture. it ex
 http://localhost:8080/userProfile/uploadVideo
 
 #### Download a Video the user have Uploaded
-
-
 http://localhost:8080/userProfile/downloadVideo/{id}
 
-
+the above api endpoint enables to fetch and download a video that a user has uploaded into their profile. it also expects an id as it is in the picture download api endpoint, the id is used to identify which users video you want to download. providing a correct and registered user id will allow you to download a video that coresponds with that user profile account.
 
 #### View Detail
 http://localhost:8080/userProfile/viewDetail/{id}
