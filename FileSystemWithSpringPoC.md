@@ -10,19 +10,38 @@ in this project we are going to create a user profile manager web application th
 
 
 
+### All of our Spring Boot API Endpoints are listed bellow
+
+
+#### Upload a new Users Profile Picture
 http://localhost:8080/uploadImage
+
+#### Endpoint to Download Profile Picture 
 http://localhost:8080/userProfile/downloadPhoto/{id}
+the above api endpoint is used to fetch and download user profile picture. it expects an id , the id is used to identify which users profile picture you want to download. by providing a correct and registered user id you can successfully download a picture of  the respective user. 
 
 
-/userProfile/uploadVideo
-/userProfile/downloadVideo/{id}
+#### Upload a new Video in the Users Profile
+http://localhost:8080/userProfile/uploadVideo
+
+#### Download a Video the user have Uploaded
+
+
+http://localhost:8080/userProfile/downloadVideo/{id}
 
 
 
-/userProfile/viewDetail/{id}
-/addNew
-/userProfile/update/{id}
-/userProfile/deleteProfile/{id}
+#### View Detail
+http://localhost:8080/userProfile/viewDetail/{id}
+
+#### Add a new User
+http://localhost:8080/addNew
+
+#### Edit and Update a user Profile
+http://localhost:8080/userProfile/update/{id}
+
+#### Delete User Profile
+http://localhost:8080/userProfile/deleteProfile/{id}
 
 
 ### Screenshot
