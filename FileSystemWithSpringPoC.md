@@ -9,7 +9,7 @@ The main objective of the spring boot project in this repository is to create a 
 in this project we are going to create a user profile manager web application that enables us to create , edit , delete and update user profile information and, each and every user profile consists of profile picture as well as a video file for each and every individual user profile we have in our profiles list.
 
 
-## Screenshot
+### Screenshot
 ### Main Landing Page of the web app look
 
 <hr>
@@ -43,6 +43,9 @@ in this project we are going to create a user profile manager web application th
 
 ### File Manager Tab After Adding a new User 
 ![filemgr-afteraddinguser](https://user-images.githubusercontent.com/88676535/165319143-7e9c7605-6e2a-48b3-9ab7-4dabd0526ea4.png)
+
+### Go to Details page to upload a video
+![details page](https://user-images.githubusercontent.com/88676535/165319032-52566eca-8912-4d7b-9502-4a50d60924d9.png)
 
 ### Uploading a Video
 ![upload and dowload video](https://user-images.githubusercontent.com/88676535/165319202-a2720c4d-be60-4347-b3f4-bed1d9db9c4f.png)
