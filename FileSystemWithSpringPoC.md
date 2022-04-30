@@ -8,14 +8,6 @@ The main objective of the spring boot project in this repository is to create a 
 
 in this project we are going to create a user profile manager web application that enables us to create , edit , delete and update user profile information and, each and every user profile consists of profile picture as well as a video file for each and every individual user profile we have in our profiles list.
 
-### How to Clone and Run this Project 
-
-
- ```
-        git clone https:://www.github.com/project/path
-        
- ```
-
 
 ### Configuring Spring Boot multipartFile upload file size limit
 
