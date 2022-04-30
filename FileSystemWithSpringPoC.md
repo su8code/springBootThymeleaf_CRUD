@@ -9,11 +9,11 @@ The main objective of the spring boot project in this repository is to create a 
 in this project we are going to create a user profile manager web application that enables us to create , edit , delete and update user profile information and, each and every user profile consists of profile picture as well as a video file for each and every individual user profile we have in our profiles list.
 
 
-### Configuring Spring Boot multipartFile upload file size limit
+### Configuring Spring Boot multipartFile upload size limit
 
 ![properties](https://user-images.githubusercontent.com/88676535/166115921-bbde902c-415c-40ed-ae3f-29b891c23676.png)
 
-on the bove screenshot the first two line of code show how we can configure and change the default value of file upload size limmit and set it to 6GB.  on all the forms we have when we upload image and video files. 
+when we open our project folder and nevigate to `src>main>resource` we will get application.properties file as shown in the screenshot above. inorder to change the file size limmit  the first two line of code show how we can configure and change the default value of file upload size limmit and set it to 6GB.  on all the forms we have when we upload image and video files. 
 
 ```
 
