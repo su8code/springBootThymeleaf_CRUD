@@ -13,7 +13,7 @@ in this project we are going to create a user profile manager web application th
 
 ![properties](https://user-images.githubusercontent.com/88676535/166115921-bbde902c-415c-40ed-ae3f-29b891c23676.png)
 
-when we open our project folder and nevigate to `src>main>resource` we will get application.properties file as shown in the screenshot above. inorder to change the file size limmit  the first two line of code show how we can configure and change the default value of file upload size limmit and set it to 6GB.  on all the forms we have when we upload image and video files. 
+when we open our project folder and nevigate to `src>main>resource` we will get application.properties file as shown in the screenshot above. inorder to change the file size limit  the first two line of code show how we can configure and change the default value of file upload size limit and set it to 6GB. the above two lines of code will set the file upload limit to 6GB.
 
 ```
 
