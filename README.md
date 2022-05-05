@@ -13,7 +13,7 @@ in this project we are going to create a user profile manager web application th
 
 ![properties](https://user-images.githubusercontent.com/88676535/166115921-bbde902c-415c-40ed-ae3f-29b891c23676.png)
 
-when we open our project folder and nevigate to `src>main>resource` we will get `application.properties` file which is as shown in the screenshot above. it includes most important configurations for the entire spring boot api and inorder to change the file size limit of our server side program we need to modify some configurations, the first two line of code show how we can configure and change the default value of file upload size limit and set it to 6GB. the following two lines of code will set the file upload limit to 6GB.
+when we open our project folder and nevigate to `src>main>resource` we will get `application.properties` file which is as shown in the screenshot above. it includes most important configurations for this spring boot project and inorder to change the file size limit of our server side program we need to modify some configurations, the first two line of code show how we can configure and change the default value of file upload size limit and set it to 6GB. the following two lines of code will set the file upload limit to 6GB.
 
 ```
 
