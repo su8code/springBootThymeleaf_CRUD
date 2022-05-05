@@ -13,7 +13,7 @@ in this project we are going to create a user profile manager web application th
 
 ![properties](https://user-images.githubusercontent.com/88676535/166115921-bbde902c-415c-40ed-ae3f-29b891c23676.png)
 
-when we open our project folder and nevigate to `src>main>resource` we will get application.properties file as shown in the screenshot above. inorder to change the file size limit  the first two line of code show how we can configure and change the default value of file upload size limit and set it to 6GB. the above two lines of code will set the file upload limit to 6GB.
+when we open our project folder and nevigate to `src>main>resource` we will get application.properties file as shown in the screenshot above. inorder to change the file size limit  the first two line of code show how we can configure and change the default value of file upload size limit and set it to 6GB. the following two lines of code will set the file upload limit to 6GB.
 
 ```
 
@@ -26,7 +26,7 @@ spring.servlet.multipart.max-request-size=6144MB
 ![upload size limit](https://user-images.githubusercontent.com/88676535/166115837-fc89059d-1c63-4720-8f05-210fce6b4470.png)
 
 
-### All of our Spring Boot API Endpoints are listed bellow
+### All of our Spring Boot API endpoint's are listed bellow
 
 
 #### Upload a new Users Profile Picture
