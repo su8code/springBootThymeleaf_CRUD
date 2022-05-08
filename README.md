@@ -30,7 +30,9 @@ The simplest way to start with a skeleton Spring Boot project, as always, is usi
 
 ![spring starter](https://user-images.githubusercontent.com/88676535/167289063-22107abc-1997-4bab-9a8c-1e467076f6f3.png)
 
-Spring provides a MultipartFile interface to handle HTTP multi-part requests for uploading files. Multipart-file requests break large files into smaller chunks which makes it efficient for file uploads. 
+Spring provides a MultipartFile interface to handle HTTP multi-part requests for uploading files. Multipart-file requests break large files into smaller chunks which makes it efficient for file uploads.
+
+
 
 ### Configure and Increase the Spring Boot File Upload Size Limit
 
@@ -156,7 +158,7 @@ we have a simple thymleaf page with a form that maps directly to the /uploadImag
     
 ```
 
-when you hover over the profile picture inside the View Detail page of specific users profile the download button will popup and get visible, clicking the download button will send request to the above endpoint with the the users id and based on the provided id the above endpoint will search for the picture and it will return the picture data through the response File stream.
+inside the View Detail page of specific users profile hovering on the profile picture will make the download button to popup and get visible, clicking the download button will send request to the above endpoint with the the users id , and based on the provided id the above endpoint will search for the picture and it will return the picture data through the response File stream.
 
 ![image download](https://user-images.githubusercontent.com/88676535/167300058-aaf82e94-64c9-4b2c-b242-89195ff4556a.png)
 
@@ -224,17 +226,10 @@ public class AppExceptionHandler {
 ```
 #### Upload a Video
 
-the controller to upload a video has also the following endpoint it expects multipart file from the form that includes the video file. upon clicking the submit button the controller will process the file and store it inside the `video` folder of the user's directory.
+the controller to upload a video has also the following endpoint ,  it expects multipart file from the video upload form. upon clicking the submit button the controller will process the file and store it inside the `video` folder of the current user's directory.
 
-
+endpoint to upload a video
 http://localhost:8080/userProfile/uploadVideo
-
-
-
-### we have the following Spring Boot API endpoint's 
-
-
-
 
 
 #### Endpoint to Download Profile Picture 
@@ -251,44 +246,36 @@ http://localhost:8080/userProfile/downloadVideo/{id}
 <br />
 the above api endpoint enables to fetch and download a video that a user has uploaded into their profile. it also expects an id as it is in the picture download api endpoint, the id is used to identify which users video you want to download. providing a correct and registered user id will allow you to download a video that coresponds with that user profile.
 
-#### View Detail
-http://localhost:8080/userProfile/viewDetail/{id}
-
-#### Add a new User
-http://localhost:8080/addNew
-
-#### Edit and Update a user Profile
-http://localhost:8080/userProfile/update/{id}
-
-#### Delete User Profile
-http://localhost:8080/userProfile/deleteProfile/{id}
 
 
-### Add/Register a New Account
-
-![add-new](https://user-images.githubusercontent.com/88676535/165318780-54981fac-eb54-4796-adee-1a9caac30341.png)
-
-### Details Page after Clicking the Details icon (the eye icon) 
+#### View Detail Page
+Detail Page endpoint:- http://localhost:8080/userProfile/viewDetail/{id}
+#### Details Page after Clicking the Details icon (the eye icon) 
 ![details page](https://user-images.githubusercontent.com/88676535/165319032-52566eca-8912-4d7b-9502-4a50d60924d9.png)
 
+
+#### Add a new User
+endpoint to add new user: http://localhost:8080/addNew
+![add new user](https://user-images.githubusercontent.com/88676535/165318865-ece777f4-fed7-46a3-aee8-1c719a7ec9a9.png)
+![add-new](https://user-images.githubusercontent.com/88676535/165318780-54981fac-eb54-4796-adee-1a9caac30341.png)
+
+#### after adding a new User the home page will look 
+![home-after-adding-user](https://user-images.githubusercontent.com/88676535/165318708-e4090f70-a457-489a-b53e-893410e09504.png)
+
+
+#### Edit and Update a user Profile
+
+endpoint to edit and update users profile:- http://localhost:8080/userProfile/update/{id}
 ### Edit User Pofile Information
 ![edit profile](https://user-images.githubusercontent.com/88676535/165319071-ecdf8117-755f-49d8-90a3-8958b1fb3db1.png)
 
 
-### Simple File Manager to View files uploaded by each individual user
-![file-manager](https://user-images.githubusercontent.com/88676535/165319116-cad1c83f-1a8d-4e0d-94c1-fa80e24b2d7b.png)
+#### Delete User Profile
+http://localhost:8080/userProfile/deleteProfile/{id}
 
-### Adding a New User 
-![add new user](https://user-images.githubusercontent.com/88676535/165318865-ece777f4-fed7-46a3-aee8-1c719a7ec9a9.png)
+### Uploading a video
 
-
-### Landing Page After Adding a new user and uploading a Photo
-![home-after-adding-user](https://user-images.githubusercontent.com/88676535/165318708-e4090f70-a457-489a-b53e-893410e09504.png)
-
-### File Manager Tab After Adding a new User 
-![filemgr-afteraddinguser](https://user-images.githubusercontent.com/88676535/165319143-7e9c7605-6e2a-48b3-9ab7-4dabd0526ea4.png)
-
-### Go to Details page to upload a video
+to upload a video you need first to browse to the Details page and after clicking a `videos` button the form will be shown and you can upload a video
 ![details page](https://user-images.githubusercontent.com/88676535/165319032-52566eca-8912-4d7b-9502-4a50d60924d9.png)
 
 ### Uploading a Video
