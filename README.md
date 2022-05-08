@@ -6,14 +6,14 @@
 
 The main objective of the spring boot project in this repository is to create a fullstack web application for implementing and testing spring boot as a backend to implement a File Upload and Download functionality by using the file system inside a backend server. 
 
-In this project we are going to create a simple demo of user profile manager web application that enables us to create , edit , delete and update user profile information, each and every user profile consists of profile picture as well as a video file,therefore for each and every individual user profiles on our user profiles list we do have a picture and video files which is our main target for implementing the file upload and download functionality in spring boot.
+In this project we are going to create a simple demo of user profile manager web application that enables us to create , edit , delete and update user profile information, each and every user profile consists of profile picture as well as a video file,which is our main target for implementing the file upload and download functionality in this simple spring boot project.
 
 
 ### We Used
 
-Development Machine:- Linux Operating System(debian based Linux OS).
-Spring Web 
-Thymeleaf
+Development Machine:- Linux Operating System(debian based Linux OS). <br />
+Spring Web <br />
+Thymeleaf <br />
 
 ### 
 
