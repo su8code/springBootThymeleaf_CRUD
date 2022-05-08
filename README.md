@@ -23,12 +23,13 @@ The simplest way to start with a skeleton Spring Boot project, as always, is usi
 
 ![spring starter](https://user-images.githubusercontent.com/88676535/167289063-22107abc-1997-4bab-9a8c-1e467076f6f3.png)
 
+Spring provides a MultipartFile interface to handle HTTP multi-part requests for uploading files. Multipart-file requests break large files into smaller chunks which makes it efficient for file uploads. 
 
 ### Configure and Increase the Spring Boot File Upload Size Limit
 
 ![properties](https://user-images.githubusercontent.com/88676535/166115921-bbde902c-415c-40ed-ae3f-29b891c23676.png)
 
-by default spring boot only allows uploading upto 1MB size of files via multipart form, so inorder to enable our web application allow uploading larger files which are greater than 1MB we must modify some configurations and override the default multipart upload size limit inside the spring boot configuration file , every spring boot may modify the configuration file differently because of many options available to use external configuration to define our spring boot project property but each of them will allow us to modify the default values, for me i will use the application file, the application file will help in this scenario since in the  `application.properties`  each line is a single configuration used to set and modify the default value, depending on the version of spring boot, add different configurations to the application file, the file which is found inside `src>main>resource`. <br /> nevigate to `src>main>resource` from your project directory and you will get the the application file.
+by default spring boot allows uploading only upto 1MB size of files via multipart form, so inorder to enable our web application allow uploading larger files which are greater than 1MB we must modify some configurations and override the default multipart upload size limit inside the spring boot configuration file , every spring boot project may modify the configuration file differently because of so many options available out there to use external configuration for defining the spring boot project property but each of them will allow us to modify the default values, for me i will use the application file, the application file will help in this scenario since in the  `application.properties`  each line is a single configuration used to set and modify the default value, depending on the version of spring boot, add different configurations to the application file, the file which is found inside `src>main>resource`. <br /> nevigate to `src>main>resource` from your project directory and you will get the the application file.
 
 according to Your spring boot version append the following line of codes to this file , as an example let's increase the upload limit upto 2GB.
 
