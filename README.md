@@ -73,7 +73,44 @@ spring:
       max-file-size: 2048MB
       max-request-size: 2048MB
       
-```      
+```  
+
+### Image Upload Controller
+
+```java
+
+@Controller
+public class ImageController {
+
+    @PostMapping("/uploadImage")
+    public String uploadImage(@RequestParam( name = "name" , required = false) String name , Model model , @RequestParam("image") MultipartFile multipartFile) throws IOException {
+
+        String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+        System.out.println("File Name: "+fileName);
+        String uploadDir = "user-photos/"+name;
+        System.out.println("Image Uploading... "+name);
+        StorageService.saveFile(uploadDir, fileName, multipartFile);
+        model.addAttribute("userId" , numberOfProfiles);
+        model.addAttribute("profilePic", baseUrl+"profile/"+name+"/"+fileName);
+        model.addAttribute("name" , name);
+        return "addNew";
+    }
+    
+
+```
+
+
+### Custom Exception
+
+
+
+```java
+
+  System.out.print("Hello world!")
+
+```
+
+
 
 ### In this simple user profile manager project we have the following Spring Boot API endpoint's 
 
@@ -118,15 +155,6 @@ http://localhost:8080/userProfile/deleteProfile/{id}
 
 <hr>
 
-
-### Custom Exception
-
-
-
-```java
-  System.out.print("Hello world!")
-
-```
 
 ### Add/Register a New Account
 
