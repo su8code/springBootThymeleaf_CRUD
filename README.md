@@ -28,18 +28,39 @@ The simplest way to start with a skeleton Spring Boot project, as always, is usi
 
 ![properties](https://user-images.githubusercontent.com/88676535/166115921-bbde902c-415c-40ed-ae3f-29b891c23676.png)
 
-by default spring boot only allows uploading upto 1MB size of files in multipart form , so to enable uploading large files greater than 1MB we must modify the default multipart upload size limit in the spring boot configuration file , the configuration file which is found inside `src>main>resource` directory is named `application.properties`. <br /> you will get this file inside your project, open the project folder and nevigate to `src>main>resource` it includes most important configurations for this spring boot project, the following two lines of code will set the file upload limit to 6GB.
+by default spring boot only allows uploading upto 1MB size of files in multipart form , so to enable uploading larger files which are greater than 1MB we must modify some configurations and override the default multipart upload size limit inside the spring boot configuration file , the application file will help in this scenario since in the  `application.properties`  each line is a single configuration used to set and modify the default value, depending on the version of spring boot, add different configurations to the application file, the file which is found inside `src>main>resource`. <br /> nevigate to `src>main>resource` from your project directory and you will get the the application file.
+
+according to Your spring boot version append the following line of codes to this file , as an example let's increase the upload limit upto 2GB.
+
+
+#### Before Spring Boot 2.0:
+
+```
+spring.http.multipart.max-file-size=2048MB
+spring.http.multipart.max-request-size=2048MB
 
 ```
 
-spring.servlet.multipart.max-file-size=6144MB
-spring.servlet.multipart.max-request-size=6144MB
-
+#### For those using Spring Boot 2.0 and above (as of M1 release), the property names have changed to:
 
 ```
 
-![upload size limit](https://user-images.githubusercontent.com/88676535/166115837-fc89059d-1c63-4720-8f05-210fce6b4470.png)
+spring.servlet.multipart.max-file-size=2048MB
+spring.servlet.multipart.max-request-size=2048MB
 
+```
+
+Note the prefix is `spring.servlet` instead of `spring.http`.
+
+#### if you have application.yml
+
+spring:
+ servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 15MB
+      
+      
 
 ### All of the Spring Boot API endpoint's are listed bellow
 
