@@ -24,7 +24,7 @@ Thymeleaf <br />
 
 <hr>
 
-To demonstrate file uploading, we'll be building a typical Spring MVC application which consists of a `Controller`, a `Service` for backend processing, and `Thymeleaf` for view rendering , [thymeleaf](https://www.thymeleaf.org/documentation.html) is a modern server-side Java template engine for both web and standalone environments.
+To demonstrate file uploading, we'll be building a typical Spring MVC application which consists of a `Controller`, a `Service` for backend processing, and `Thymeleaf` for view rendering , [thymeleaf](https://www.thymeleaf.org/documentation.html) is a modern server-side Java template engine.
 
 The simplest way to start with a skeleton Spring Boot project, as always, is using Spring Initializer. Select your preferred version of Spring Boot and add the Web and Thymeleaf dependencies:
 
@@ -107,6 +107,7 @@ public class ImageController {
 ### Upload Photo 
 ![uploaad profile picture](https://user-images.githubusercontent.com/88676535/165319172-d8a55af3-0650-4e4d-8f6e-101f7cbd9ab4.png)
 
+we have a simple thymleaf page with a form that maps directly to the /uploadImage URL with form method post and it's enctype is multipart/form-data with an input type as a File.
 
 ### Image Download Controller 
 
@@ -149,7 +150,9 @@ public class ImageController {
     
 ```
 
-when you hovr over the profile picture inside the viewDetail page of specific users profile the download button will popup and display, clicking the download button will request the above endpoint with the the users id and based on the provided id the above endpoint will search for the picture based on that id and return the picture data through the response File stream.
+when you hover over the profile picture inside the View Detail page of specific users profile the download button will popup and get visible, clicking the download button will send request to the above endpoint with the the users id and based on the provided id the above endpoint will search for the picture and it will return the picture data through the response File stream.
+
+![image download](https://user-images.githubusercontent.com/88676535/167300058-aaf82e94-64c9-4b2c-b242-89195ff4556a.png)
 
 
 ### Custom Exception
@@ -214,15 +217,7 @@ public class AppExceptionHandler {
 
 ```
 
-### Main Landing Page of the web app look
-
-<hr>
-
-![landingPage](https://user-images.githubusercontent.com/88676535/165318743-04a5a50f-36d4-4abd-becd-73446dd2a920.png)
-
-<hr>
-
-### In this simple user profile manager project we have the following Spring Boot API endpoint's 
+### we have the following Spring Boot API endpoint's 
 
 
 #### to Upload a new Users Profile Picture
@@ -254,10 +249,6 @@ http://localhost:8080/userProfile/update/{id}
 
 #### Delete User Profile
 http://localhost:8080/userProfile/deleteProfile/{id}
-
-
-### Screenshot
-
 
 
 ### Add/Register a New Account
