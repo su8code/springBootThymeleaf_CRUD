@@ -17,11 +17,18 @@ Thymeleaf <br />
 
 ### 
 
+To demonstrate file uploading, we'll be building a typical Spring MVC application which consists of a `Controller`, a `Service` for backend processing, and `Thymeleaf` for view rendering , [thymeleaf](https://www.thymeleaf.org/documentation.html) is a modern server-side Java template engine for both web and standalone environments.
+
+The simplest way to start with a skeleton Spring Boot project, as always, is using Spring Initializer. Select your preferred version of Spring Boot and add the Web and Thymeleaf dependencies:
+
+![spring starter](https://user-images.githubusercontent.com/88676535/167289063-22107abc-1997-4bab-9a8c-1e467076f6f3.png)
+
+
 ### Configure and Increase the Spring Boot File Upload Size Limit
 
 ![properties](https://user-images.githubusercontent.com/88676535/166115921-bbde902c-415c-40ed-ae3f-29b891c23676.png)
 
-when we open our project folder and nevigate to `src>main>resource` we will get `application.properties` file which is as shown in the screenshot above. it includes most important configurations for this spring boot project and inorder to change the file size limit of our server side program we need to modify some configurations, the first two line of code show how we can configure and change the default value of file upload size limit and set it to 6GB. the following two lines of code will set the file upload limit to 6GB.
+by default spring boot only allows uploading upto 1MB size of files in multipart form , so to enable uploading large files which are greater than 1MB we need to modify the default multipart upload size limit in the configuration file , the configuration can be modified inside a file named `application.properties`. <br /> you will get this file inside your project open the project folder and nevigate to `src>main>resource` it includes most important configurations for this spring boot project, the following two lines of code will set the file upload limit to 6GB.
 
 ```
 
