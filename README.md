@@ -63,8 +63,8 @@ inside your application.yaml add the following line of code , this code will ove
 spring:
  servlet:
     multipart:
-      max-file-size: 15MB
-      max-request-size: 15MB
+      max-file-size: 2048MB
+      max-request-size: 2048MB
       
 ```      
 
@@ -87,7 +87,7 @@ http://localhost:8080/userProfile/uploadVideo
 #### Download a Video the user have Uploaded
 http://localhost:8080/userProfile/downloadVideo/{id}
 <br />
-the above api endpoint enables to fetch and download a video that a user has uploaded into their profile. it also expects an id as it is in the picture download api endpoint, the id is used to identify which users video you want to download. providing a correct and registered user id will allow you to download a video that coresponds with that user profile account.
+the above api endpoint enables to fetch and download a video that a user has uploaded into their profile. it also expects an id as it is in the picture download api endpoint, the id is used to identify which users video you want to download. providing a correct and registered user id will allow you to download a video that coresponds with that user profile.
 
 #### View Detail
 http://localhost:8080/userProfile/viewDetail/{id}
