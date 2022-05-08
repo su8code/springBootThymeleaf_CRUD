@@ -39,7 +39,6 @@ here we will use the application file, the application file will help in this sc
 According to Your spring boot version append the following line of codes to this file , as an example let's increase the upload limit upto 2GB.
 
 you can set the limits in `KB`,`MB`,`GB`...etc
-The default value for spring.servlet.multipart.max-file-size is 1MB and the default for spring.servlet.multipart.max-request-size is 10MB. Increasing the limit for max-file-size is probably a good idea since the default is very low, but be careful not to set it too high, which could overload your server.
 
 #### Before Spring Boot 2.0:
 
@@ -75,7 +74,7 @@ spring:
       
 ```  
 
-### Image Upload and Download Controller
+### Image Upload Controller
 
 ```java
 
@@ -98,6 +97,46 @@ public class ImageController {
 
 ```
 
+### Image Download Controller 
+
+```java
+
+ @RequestMapping("/userProfile/downloadPhoto/{id}")
+    @ResponseBody
+
+    public void downloadPic(@PathVariable int id , HttpServletResponse response) throws IOException {
+        int index =  UserProfileController.getUserProfileIndex(id);
+        String str = UserProfileController.getProfiles().get(index).getProfilePic();
+        str = str.replace("http://localhost:8080/profile/" , "");
+        String imageDir = str.split("/")[0];
+        imageDir = "user-photos/"+imageDir;
+        System.out.println("Image Directory: "+imageDir);
+        String fileName = str.split("/")[1];
+        System.out.println("FileName: "+fileName);
+        if(index == 0 && id != 1){
+            imageDir = "user-photos/";
+            fileName = "user.png";
+        }
+        Resource res = StorageService.loadProfilePic(imageDir , fileName);
+        System.out.println(fileName+" is being Downloaded...");
+        response.setHeader("Content-Disposition", "attachment; filename=" +fileName);
+        response.setHeader("Content-Transfer-Encoding", "binary");
+        try{
+            BufferedOutputStream bos = new BufferedOutputStream(response.getOutputStream());
+            FileInputStream fis = new FileInputStream(res.getFile());
+            int len;
+            byte[] buf = new byte[1024];
+            while((len = fis.read(buf)) > 0) {
+                bos.write(buf,0,len);
+            }
+            bos.close();
+            response.flushBuffer();
+        }catch(Exception e){
+            System.out.println("Program Unable to Download the Image, Error Detail:- "+e.toString());
+       }
+    }
+    
+```
 
 ### Custom Exception
 
