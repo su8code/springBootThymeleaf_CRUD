@@ -107,7 +107,13 @@ public class ImageController {
 ### Upload Photo 
 ![uploaad profile picture](https://user-images.githubusercontent.com/88676535/165319172-d8a55af3-0650-4e4d-8f6e-101f7cbd9ab4.png)
 
-we have a simple thymleaf page with a form that maps directly to the /uploadImage URL with form method post and it's enctype is multipart/form-data with an input type as a File.
+we have a simple thymleaf page with a form that maps directly to the /uploadImage URL with form method post and it's enctype is multipart/form-data with an input type as a File. the uploaded picture is saved inide a newly created folder by the name of a user that uploaded the piture and overall all of each user folders are created in  `user-photos` directory. 
+
+![Screenshot_2022-05-08_03-30-01](https://user-images.githubusercontent.com/88676535/167301055-e36fc8b5-00ec-4d4c-969b-45a54c4f45e0.png)
+
+
+![Screenshot_2022-05-08_03-29-03](https://user-images.githubusercontent.com/88676535/167300997-1f9beea0-5d87-4d19-9c33-398938ce89c9.png)
+
 
 ### Image Download Controller 
 
@@ -216,12 +222,20 @@ public class AppExceptionHandler {
 </html>
 
 ```
+#### Upload a Video
+
+the controller to upload a video has also the following endpoint it expects multipart file from the form that includes the video file. upon clicking the submit button the controller will process the file and store it inside the `video` folder of the user's directory.
+
+
+http://localhost:8080/userProfile/uploadVideo
+
+
 
 ### we have the following Spring Boot API endpoint's 
 
 
-#### to Upload a new Users Profile Picture
-http://localhost:8080/uploadImage
+
+
 
 #### Endpoint to Download Profile Picture 
 http://localhost:8080/userProfile/downloadPhoto/{id}
@@ -230,8 +244,7 @@ http://localhost:8080/userProfile/downloadPhoto/{id}
 the above api endpoint is used to fetch and download user profile picture. it expects an id , the id is used to identify which users profile picture you want to download. by providing a correct and registered user id you can successfully download a picture of  the respective user. 
 
 
-#### Upload a new Video in the Users Profile
-http://localhost:8080/userProfile/uploadVideo
+
 
 #### Download a Video the user have Uploaded
 http://localhost:8080/userProfile/downloadVideo/{id}
