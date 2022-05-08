@@ -15,7 +15,14 @@ Development Machine:- Linux Operating System(debian based Linux OS). <br />
 Spring Web <br />
 Thymeleaf <br />
 
-### 
+
+### Main Landing Page of the web app
+
+<hr>
+
+![landingPage](https://user-images.githubusercontent.com/88676535/165318743-04a5a50f-36d4-4abd-becd-73446dd2a920.png)
+
+<hr>
 
 To demonstrate file uploading, we'll be building a typical Spring MVC application which consists of a `Controller`, a `Service` for backend processing, and `Thymeleaf` for view rendering , [thymeleaf](https://www.thymeleaf.org/documentation.html) is a modern server-side Java template engine for both web and standalone environments.
 
@@ -97,6 +104,10 @@ public class ImageController {
 
 ```
 
+### Upload Photo 
+![uploaad profile picture](https://user-images.githubusercontent.com/88676535/165319172-d8a55af3-0650-4e4d-8f6e-101f7cbd9ab4.png)
+
+
 ### Image Download Controller 
 
 ```java
@@ -138,17 +149,78 @@ public class ImageController {
     
 ```
 
+when you hovr over the profile picture inside the viewDetail page of specific users profile the download button will popup and display, clicking the download button will request the above endpoint with the the users id and based on the provided id the above endpoint will search for the picture based on that id and return the picture data through the response File stream.
+
+
 ### Custom Exception
 
+There is a custom FileStorageException for any exception during the file upload process. It's a simple class that extends RuntimeException:
 
 
 ```java
 
-  System.out.print("Hello world!")
+package com.ethioclicks.userProfileCrud.exception;
+
+public class FileStorageException extends RuntimeException {
+    private static final long serialVersionUID = 1L;
+    private String msg;
+
+    public FileStorageException(String msg) {
+        this.msg = msg;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+}
+
+```
+To be able to use the exception in the way that we did, Spring needs to know how to deal with it if it's encountered. For that, we've created an `AppExceptionHandler` which is annotated with `@ControllerAdvice` and has an `@ExceptionHandler` defined for `FileStorageException:`
+
+```java
+
+@ControllerAdvice
+public class AppExceptionHandler {
+
+    @ExceptionHandler(FileStorageException.class)
+    public ModelAndView handleException(FileStorageException exception, RedirectAttributes redirectAttributes) {
+
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("message", exception.getMsg());
+        mav.setViewName("error");
+        return mav;
+    }
+}
 
 ```
 
 
+
+```html
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>ERROR</title>
+</head>
+<body>
+  <h1>Error!!!</h1>
+  <div th:if="${message}">
+    <h2 th:text="${message}"/>
+  </div>
+</body>
+</html>
+
+```
+
+### Main Landing Page of the web app look
+
+<hr>
+
+![landingPage](https://user-images.githubusercontent.com/88676535/165318743-04a5a50f-36d4-4abd-becd-73446dd2a920.png)
+
+<hr>
 
 ### In this simple user profile manager project we have the following Spring Boot API endpoint's 
 
@@ -185,13 +257,7 @@ http://localhost:8080/userProfile/deleteProfile/{id}
 
 
 ### Screenshot
-### Main Landing Page of the web app look
 
-<hr>
-
-![landingPage](https://user-images.githubusercontent.com/88676535/165318743-04a5a50f-36d4-4abd-becd-73446dd2a920.png)
-
-<hr>
 
 
 ### Add/Register a New Account
@@ -211,8 +277,6 @@ http://localhost:8080/userProfile/deleteProfile/{id}
 ### Adding a New User 
 ![add new user](https://user-images.githubusercontent.com/88676535/165318865-ece777f4-fed7-46a3-aee8-1c719a7ec9a9.png)
 
-### Upload Photo 
-![uploaad profile picture](https://user-images.githubusercontent.com/88676535/165319172-d8a55af3-0650-4e4d-8f6e-101f7cbd9ab4.png)
 
 ### Landing Page After Adding a new user and uploading a Photo
 ![home-after-adding-user](https://user-images.githubusercontent.com/88676535/165318708-e4090f70-a457-489a-b53e-893410e09504.png)
