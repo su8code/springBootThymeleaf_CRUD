@@ -28,7 +28,7 @@ The simplest way to start with a skeleton Spring Boot project, as always, is usi
 
 ![properties](https://user-images.githubusercontent.com/88676535/166115921-bbde902c-415c-40ed-ae3f-29b891c23676.png)
 
-by default spring boot only allows uploading upto 1MB size of files in multipart form , so to enable uploading large files which are greater than 1MB we need to modify the default multipart upload size limit in the configuration file , the configuration can be modified inside a file named `application.properties`. <br /> you will get this file inside your project open the project folder and nevigate to `src>main>resource` it includes most important configurations for this spring boot project, the following two lines of code will set the file upload limit to 6GB.
+by default spring boot only allows uploading upto 1MB size of files in multipart form , so to enable uploading large files greater than 1MB we must modify the default multipart upload size limit in the spring boot configuration file , the configuration file which is found inside `src>main>resource` directory is named `application.properties`. <br /> you will get this file inside your project, open the project folder and nevigate to `src>main>resource` it includes most important configurations for this spring boot project, the following two lines of code will set the file upload limit to 6GB.
 
 ```
 
@@ -41,10 +41,10 @@ spring.servlet.multipart.max-request-size=6144MB
 ![upload size limit](https://user-images.githubusercontent.com/88676535/166115837-fc89059d-1c63-4720-8f05-210fce6b4470.png)
 
 
-### All of our Spring Boot API endpoint's are listed bellow
+### All of the Spring Boot API endpoint's are listed bellow
 
 
-#### Upload a new Users Profile Picture
+#### to Upload a new Users Profile Picture
 http://localhost:8080/uploadImage
 
 #### Endpoint to Download Profile Picture 
