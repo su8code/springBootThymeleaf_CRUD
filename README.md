@@ -75,7 +75,7 @@ spring:
       
 ```  
 
-### Image Upload Controller
+### Image Upload and Download Controller
 
 ```java
 
@@ -86,16 +86,15 @@ public class ImageController {
     public String uploadImage(@RequestParam( name = "name" , required = false) String name , Model model , @RequestParam("image") MultipartFile multipartFile) throws IOException {
 
         String fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
-        System.out.println("File Name: "+fileName);
+        System.out.println("Picture File Name: "+fileName);
         String uploadDir = "user-photos/"+name;
-        System.out.println("Image Uploading... "+name);
+        System.out.println(name+"\'s Profile Picture Upload in Progress... ");
         StorageService.saveFile(uploadDir, fileName, multipartFile);
         model.addAttribute("userId" , numberOfProfiles);
         model.addAttribute("profilePic", baseUrl+"profile/"+name+"/"+fileName);
         model.addAttribute("name" , name);
         return "addNew";
     }
-    
 
 ```
 
