@@ -52,7 +52,12 @@ spring.servlet.multipart.max-request-size=2048MB
 
 Note the prefix is `spring.servlet` instead of `spring.http`.
 
-#### if you have application.yml
+#### there is also another option for those who prefer to use yaml configuration 
+
+inside your application.yaml add the following line of code , this code will override the default limit for multipart file upload and enable our application to accept uploading extra large size files. depending your goal you can set the value but here we will demonstrate by setting the upload limmit upto 2GB.
+
+
+```
 
 spring:
  servlet:
@@ -60,7 +65,7 @@ spring:
       max-file-size: 15MB
       max-request-size: 15MB
       
-      
+```      
 
 ### All of the Spring Boot API endpoint's are listed bellow
 
