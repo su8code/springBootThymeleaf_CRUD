@@ -55,7 +55,7 @@ in this code carfully Note that the prefix have changed to `spring.servlet` inst
 
 #### There is also another option for those who prefer to use yaml configuration 
 
-inside your application.yaml add the following line of code , this code will override the default limit for multipart file upload and enable our application to accept uploading extra large size files. depending your goal you can set the value but here we will demonstrate by setting the upload limmit upto 2GB.
+inside your application.yaml add the following line of code , this code will override the default limit for multipart file upload and enable it to accept uploading extra large size files. depending your goal you can set the value but here we will demonstrate by setting the upload limmit upto 2GB.
 
 
 ```
@@ -68,7 +68,7 @@ spring:
       
 ```      
 
-### All of the Spring Boot API endpoint's are listed bellow
+### In this simple user profile manager project we have the following Spring Boot API endpoint's 
 
 
 #### to Upload a new Users Profile Picture
