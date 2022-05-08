@@ -2,11 +2,11 @@
   <a href="https://ethioclicks.com" rel="noopener" target="_blank"><img width="150" src="https://avatars.githubusercontent.com/u/84285742?v=4" alt="ethioclicks logo"></a>
 </p>
 <h1 align="center">ethio clicks</h1>
-<h2 align="center"> Spring Boot Users Profile Manager Simple CRUD Web App </h2>
+<h2 align="center"> Spring Boot Simple Users Profile Manager CRUD Web App </h2>
 
-The main objective of the spring boot project in this repository is to create a fullstack web application for implementing and testing spring boot as a backend to implement a File Upload and Download functionality by using the file system inside a backend server. 
+The main objective of the spring boot project in this repository is to create a fullstack web application for implementing and testing spring boot as a backend to implement a File Upload and Download functionality. 
 
-In this project we are going to create a simple demo of user profile manager web application that enables us to create , edit , delete and update user profile information, each and every user profile consists of profile picture as well as a video file,which is our main target for implementing the file upload and download functionality in this simple spring boot project.
+In this project we are going to create a simple demo of user profile manager web application that enables to create , edit , delete and update user profile information, each and every user profile consists of profile picture as well as a video file,which is our main target simple spring boot project for implementing the file upload and download functionality.
 
 
 ### We Used
